@@ -12,7 +12,7 @@
       ]
     },
     {
-      "source": "/assets/(.*\\.(mp4|mov|webm))",
+      "source": "/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
