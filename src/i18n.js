@@ -9,6 +9,7 @@ const resources = {
         experience: 'Expériences',
         skills: 'Compétences',
         education: 'Formation',
+        work: 'Réalisations',
         contact: 'Contact'
       },
       skills: {
@@ -201,6 +202,114 @@ const resources = {
         cta: 'Me Contacter',
         downloadCV: 'Télécharger CV'
       },
+      work: {
+        title: 'Réalisations',
+        subtitle: 'Une sélection de mes projets en marketing digital et création de contenu',
+        categories: {
+          academic: {
+            title: 'Projets Académiques',
+            items: {
+              academic1: {
+                title: 'Travel Advisor',
+                category: 'Projet Web'
+              },
+              academic2: {
+                title: 'Jewelry Collection',
+                category: 'E-Commerce'
+              },
+              academic3: {
+                title: 'Zara Newsletter',
+                category: 'Email Marketing'
+              }
+            }
+          },
+          alternance: {
+            title: 'Alternance - Advyse',
+            subsections: {
+              videos: 'Vidéos'
+            },
+            items: {
+              alternance1: {
+                title: 'Fiche Publicitaire',
+                category: 'Publicité'
+              },
+              alternance2: {
+                title: 'Fiche Publicitaire',
+                category: 'Publicité'
+              },
+              alternance3: {
+                title: 'Fiche Publicitaire',
+                category: 'Publicité'
+              },
+              alternance4: {
+                title: 'Fiche Publicitaire',
+                category: 'Publicité'
+              },
+              alternance5: {
+                title: 'Fiche Publicitaire',
+                category: 'Publicité'
+              },
+              alternance6: {
+                title: 'Miniature YouTube',
+                category: 'YouTube'
+              },
+              alternance7: {
+                title: 'Miniature YouTube',
+                category: 'YouTube'
+              },
+              alternance8: {
+                title: 'Miniature YouTube',
+                category: 'YouTube'
+              },
+              alternance9: {
+                title: 'Miniature YouTube',
+                category: 'YouTube'
+              },
+              alternance10: {
+                title: 'Miniature YouTube',
+                category: 'YouTube'
+              },
+              alternance11: {
+                title: 'Miniature YouTube',
+                category: 'YouTube'
+              },
+              alternance12: {
+                title: 'Miniature YouTube',
+                category: 'YouTube'
+              },
+              pochette: {
+                title: 'Pochette',
+                category: 'Vidéo'
+              },
+              montage: {
+                title: 'Montage',
+                category: 'Vidéo'
+              }
+            }
+          },
+          formation: {
+            title: 'Formation - Photoshop',
+            items: {
+              formation1: {
+                title: 'Création Photoshop',
+                category: 'Photoshop'
+              },
+              formation2: {
+                title: 'Création Photoshop',
+                category: 'Photoshop'
+              },
+              formationba1: {
+                title: 'Retouche Photo',
+                category: 'Avant/Après'
+              },
+              formationba2: {
+                title: 'Retouche Photo',
+                category: 'Avant/Après'
+              }
+            }
+          }
+        }
+      },
       experience: {
         title: 'Expériences Professionnelles',
         subtitle: 'Mon parcours dans le marketing digital et la communication',
@@ -266,6 +375,7 @@ const resources = {
         experience: 'Experience',
         skills: 'Skills',
         education: 'Education',
+        work: 'Portfolio',
         contact: 'Contact'
       },
       skills: {
@@ -457,6 +567,114 @@ const resources = {
         },
         cta: 'Contact Me',
         downloadCV: 'Download CV'
+      },
+      work: {
+        title: 'Portfolio',
+        subtitle: 'A selection of my projects in digital marketing and content creation',
+        categories: {
+          academic: {
+            title: 'Academic Projects',
+            items: {
+              academic1: {
+                title: 'Travel Advisor',
+                category: 'Web Project'
+              },
+              academic2: {
+                title: 'Jewelry Collection',
+                category: 'E-Commerce'
+              },
+              academic3: {
+                title: 'Zara Newsletter',
+                category: 'Email Marketing'
+              }
+            }
+          },
+          alternance: {
+            title: 'Work-Study - Advyse',
+            subsections: {
+              videos: 'Videos'
+            },
+            items: {
+              alternance1: {
+                title: 'Advertising Sheet',
+                category: 'Advertising'
+              },
+              alternance2: {
+                title: 'Advertising Sheet',
+                category: 'Advertising'
+              },
+              alternance3: {
+                title: 'Advertising Sheet',
+                category: 'Advertising'
+              },
+              alternance4: {
+                title: 'Advertising Sheet',
+                category: 'Advertising'
+              },
+              alternance5: {
+                title: 'Advertising Sheet',
+                category: 'Advertising'
+              },
+              alternance6: {
+                title: 'YouTube Thumbnail',
+                category: 'YouTube'
+              },
+              alternance7: {
+                title: 'YouTube Thumbnail',
+                category: 'YouTube'
+              },
+              alternance8: {
+                title: 'YouTube Thumbnail',
+                category: 'YouTube'
+              },
+              alternance9: {
+                title: 'YouTube Thumbnail',
+                category: 'YouTube'
+              },
+              alternance10: {
+                title: 'YouTube Thumbnail',
+                category: 'YouTube'
+              },
+              alternance11: {
+                title: 'YouTube Thumbnail',
+                category: 'YouTube'
+              },
+              alternance12: {
+                title: 'YouTube Thumbnail',
+                category: 'YouTube'
+              },
+              pochette: {
+                title: 'Cover Design',
+                category: 'Video'
+              },
+              montage: {
+                title: 'Video Editing',
+                category: 'Video'
+              }
+            }
+          },
+          formation: {
+            title: 'Training - Photoshop',
+            items: {
+              formation1: {
+                title: 'Photoshop Creation',
+                category: 'Photoshop'
+              },
+              formation2: {
+                title: 'Photoshop Creation',
+                category: 'Photoshop'
+              },
+              formationba1: {
+                title: 'Photo Retouching',
+                category: 'Before/After'
+              },
+              formationba2: {
+                title: 'Photo Retouching',
+                category: 'Before/After'
+              }
+            }
+          }
+        }
       },
       experience: {
         title: 'Professional Experience',

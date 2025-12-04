@@ -139,6 +139,17 @@ const Education = () => {
           ))}
         </motion.div>
       </div>
+
+      {/* Section Divider */}
+      <div className="section-divider">
+        <motion.div
+          className="divider-line"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
+        />
+      </div>
     </section>
   )
 }

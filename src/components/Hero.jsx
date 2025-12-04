@@ -177,7 +177,7 @@ const Hero = () => {
               variants={itemVariants}
             >
               <div className="stat">
-                <span className="stat-number gradient-text">4</span>
+                <span className="stat-number gradient-text">3</span>
                 <span className="stat-label">{t('hero.stats.experience')}</span>
               </div>
               <div className="stat">

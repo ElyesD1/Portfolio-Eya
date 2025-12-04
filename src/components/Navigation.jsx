@@ -15,6 +15,7 @@ const Navigation = () => {
     { key: 'experience', href: '#experience', label: t('nav.experience') },
     { key: 'skills', href: '#skills', label: t('nav.skills') },
     { key: 'education', href: '#education', label: t('nav.education') },
+    { key: 'work', href: '#work', label: t('nav.work') },
     { key: 'contact', href: '#contact', label: t('nav.contact') }
   ]
 
@@ -23,7 +24,7 @@ const Navigation = () => {
       const scrollPosition = window.scrollY
       setScrolled(scrollPosition > 50)
 
-      const sections = ['hero', 'about', 'experience', 'skills', 'education', 'contact']
+      const sections = ['hero', 'about', 'experience', 'skills', 'education', 'work', 'contact']
       const currentSection = sections.find(section => {
         const element = document.getElementById(section)
         if (element) {
