@@ -278,6 +278,10 @@ const resources = {
                 title: 'Miniature YouTube',
                 category: 'YouTube'
               },
+              alternance13: {
+                title: 'Newsletter Advyse',
+                category: 'Newsletter'
+              },
               pochette: {
                 title: 'Pochette',
                 category: 'Vidéo'
@@ -644,6 +648,10 @@ const resources = {
               alternance12: {
                 title: 'YouTube Thumbnail',
                 category: 'YouTube'
+              },
+              alternance13: {
+                title: 'Advyse Newsletter',
+                category: 'Newsletter'
               },
               pochette: {
                 title: 'Cover Design',

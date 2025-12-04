@@ -21,6 +21,7 @@ import alternance9 from '../assets/alternance9.jpg'
 import alternance10 from '../assets/alternance10.jpg'
 import alternance11 from '../assets/alternance11.jpg'
 import alternance12 from '../assets/alternance12.jpg'
+import alternance13 from '../assets/alternance13.mp4'
 import pochette from '../assets/pochette.mp4'
 import montage from '../assets/montage.mp4'
 
@@ -163,6 +164,13 @@ const Work = () => {
           key: 'videos',
           title: t('work.categories.alternance.subsections.videos'),
           items: [
+            {
+              id: 'alternance13',
+              type: 'mobile-video',
+              src: alternance13,
+              title: t('work.categories.alternance.items.alternance13.title'),
+              category: t('work.categories.alternance.items.alternance13.category')
+            },
             {
               id: 'pochette',
               type: 'video',
@@ -326,7 +334,7 @@ const Work = () => {
                       {subsection.items.map((item) => (
                       <motion.div
                         key={item.id}
-                        className={`work-item glass ${item.type === 'video' ? 'video-card' : 'content-card'}`}
+                        className={`work-item glass ${item.type === 'video' || item.type === 'mobile-video' ? 'video-card' : 'content-card'} ${item.type === 'mobile-video' ? 'mobile-video-card' : ''}`}
                         variants={itemVariants}
                         whileHover={{ y: -10, scale: 1.02 }}
                         onClick={() => {
@@ -338,7 +346,22 @@ const Work = () => {
                         }}
                       >
                           <div className="work-preview">
-                            {item.type === 'video' ? (
+                            {item.type === 'mobile-video' ? (
+                              <div className="mobile-video-container">
+                                <div className="mobile-frame">
+                                  <div className="mobile-notch"></div>
+                                  <video
+                                    src={item.src}
+                                    className="mobile-video"
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    preload="auto"
+                                  />
+                                </div>
+                              </div>
+                            ) : item.type === 'video' ? (
                               <div className="video-thumbnail">
                                 <video
                                   src={item.src}

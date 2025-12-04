@@ -249,6 +249,12 @@
   height: 550px;
 }
 
+/* Mobile video cards have narrower width */
+.work-item.mobile-video-card {
+  width: 300px;
+  height: 620px;
+}
+
 /* Image/PDF cards have flexible height */
 .work-item.content-card {
   height: auto;
@@ -343,6 +349,61 @@
 .work-item:hover .preview-image {
   transform: scale(1.15);
   filter: brightness(1.1);
+}
+
+/* Mobile Video Container */
+.mobile-video-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  padding: 20px;
+}
+
+.mobile-frame {
+  position: relative;
+  width: 220px;
+  height: 480px;
+  background: #000;
+  border-radius: 36px;
+  border: 8px solid #2a2a2a;
+  box-shadow: 
+    0 0 0 2px #1a1a1a,
+    0 20px 60px rgba(0, 0, 0, 0.8),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.work-item:hover .mobile-frame {
+  transform: scale(1.05);
+  box-shadow: 
+    0 0 0 2px #c084fc,
+    0 30px 80px rgba(192, 132, 252, 0.4),
+    inset 0 0 0 1px rgba(192, 132, 252, 0.3);
+}
+
+.mobile-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 28px;
+  background: #000;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Image Preview in Card */
