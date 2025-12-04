@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { Briefcase, X, ChevronLeft, ChevronRight, Play, FileText } from 'lucide-react'
+import { Briefcase, X, ChevronLeft, ChevronRight, Play, FileText, ExternalLink } from 'lucide-react'
 import './Work.css'
 
 // Import academic projects
 import academic1 from '../assets/academic1.mp4'
-import academic2 from '../assets/academic2.mov'
 import academic3 from '../assets/academic3.mp4'
 
 // Import alternance projects
@@ -53,8 +52,8 @@ const Work = () => {
         },
         {
           id: 'academic2',
-          type: 'video',
-          src: academic2,
+          type: 'website',
+          url: 'https://1wjbu9-sg.myshopify.com',
           title: t('work.categories.academic.items.academic2.title'),
           category: t('work.categories.academic.items.academic2.category')
         },
@@ -325,13 +324,19 @@ const Work = () => {
                   <div className="work-gallery">
                     <div className="gallery-scroll">
                       {subsection.items.map((item) => (
-                        <motion.div
-                          key={item.id}
-                          className={`work-item glass ${item.type === 'video' ? 'video-card' : 'content-card'}`}
-                          variants={itemVariants}
-                          whileHover={{ y: -10, scale: 1.02 }}
-                          onClick={() => item.type === 'video' && handleItemClick(item)}
-                        >
+                      <motion.div
+                        key={item.id}
+                        className={`work-item glass ${item.type === 'video' ? 'video-card' : 'content-card'}`}
+                        variants={itemVariants}
+                        whileHover={{ y: -10, scale: 1.02 }}
+                        onClick={() => {
+                          if (item.type === 'video') {
+                            handleItemClick(item)
+                          } else if (item.type === 'website') {
+                            window.open(item.url, '_blank')
+                          }
+                        }}
+                      >
                           <div className="work-preview">
                             {item.type === 'video' ? (
                               <div className="video-thumbnail">
@@ -417,7 +422,14 @@ const Work = () => {
                       className={`work-item glass ${item.type === 'video' ? 'video-card' : 'content-card'}`}
                       variants={itemVariants}
                       whileHover={{ y: -10, scale: 1.02 }}
-                      onClick={() => item.type === 'video' && handleItemClick(item)}
+                      onClick={() => {
+                        if (item.type === 'video') {
+                          handleItemClick(item)
+                        } else if (item.type === 'website') {
+                          window.open(item.url, '_blank', 'noopener,noreferrer')
+                        }
+                      }}
+                      style={{ cursor: item.type === 'website' ? 'pointer' : 'default' }}
                     >
                       <div className="work-preview">
                         {item.type === 'video' ? (
@@ -463,6 +475,22 @@ const Work = () => {
                             <div className="before-after-labels">
                               <span className="label-before">Avant</span>
                               <span className="label-after">Après</span>
+                            </div>
+                          </div>
+                        ) : item.type === 'website' ? (
+                          <div className="website-preview-container">
+                            <div className="website-placeholder">
+                              <div className="website-icon">
+                                <ExternalLink size={64} />
+                              </div>
+                              <div className="website-info">
+                                <h4>{item.title}</h4>
+                                <p>{item.url}</p>
+                              </div>
+                            </div>
+                            <div className="website-overlay">
+                              <ExternalLink size={48} />
+                              <span>{t('work.viewWebsite')}</span>
                             </div>
                           </div>
                         ) : item.type === 'image' ? (

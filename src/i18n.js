@@ -205,6 +205,7 @@ const resources = {
       work: {
         title: 'Réalisations',
         subtitle: 'Une sélection de mes projets en marketing digital et création de contenu',
+        viewWebsite: 'Voir le site',
         categories: {
           academic: {
             title: 'Projets Académiques',
@@ -571,6 +572,7 @@ const resources = {
       work: {
         title: 'Portfolio',
         subtitle: 'A selection of my projects in digital marketing and content creation',
+        viewWebsite: 'View Website',
         categories: {
           academic: {
             title: 'Academic Projects',
