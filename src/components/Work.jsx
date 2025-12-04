@@ -340,6 +340,11 @@ const Work = () => {
                                   className="preview-video"
                                   muted
                                   playsInline
+                                  preload="metadata"
+                                  onError={(e) => {
+                                    console.error('Video failed to load:', item.id, e)
+                                    e.target.style.display = 'none'
+                                  }}
                                 />
                                 <div className="play-overlay">
                                   <Play size={48} />
@@ -521,7 +526,10 @@ const Work = () => {
                     src={selectedItem.src}
                     controls
                     autoPlay
+                    playsInline
+                    preload="auto"
                     className="preview-media"
+                    onError={(e) => console.error('Video playback error:', selectedItem.id, e)}
                   />
                 )}
                 {selectedItem.type === 'image' && (
