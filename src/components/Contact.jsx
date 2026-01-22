@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { Mail, Linkedin, MapPin, Calendar, Sparkles, Send, Heart } from 'lucide-react'
+import { Mail, Linkedin, MapPin, Calendar, Sparkles, Send, Heart, Music } from 'lucide-react'
 import './Contact.css'
 
 const Contact = () => {
@@ -20,6 +20,13 @@ const Contact = () => {
       value: 'Eya Darouich',
       link: 'https://linkedin.com/in/eya-darouich-b09b90224',
       color: 'blue'
+    },
+    {
+      icon: Music,
+      label: t('contact.tiktok'),
+      value: '@eyaadarouich',
+      link: 'https://www.tiktok.com/@eyaadarouich',
+      color: 'pink'
     },
     {
       icon: MapPin,

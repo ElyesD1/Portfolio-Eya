@@ -164,6 +164,7 @@ const resources = {
         subtitle: 'Discutons de votre prochain projet',
         email: 'Email',
         linkedin: 'LinkedIn',
+        tiktok: 'TikTok',
         location: 'Localisation',
         availability: 'Disponibilité',
         availabilityValue: 'Ouvert aux opportunités',
@@ -206,6 +207,9 @@ const resources = {
         title: 'Réalisations',
         subtitle: 'Une sélection de mes projets en marketing digital et création de contenu',
         viewWebsite: 'Voir le site',
+        tiktokCTA: 'Envie de découvrir plus de contenu ? Suivez-moi sur TikTok ! 🎵',
+        followers: 'abonnés',
+        following: 'abonnements',
         categories: {
           academic: {
             title: 'Projets Académiques',
@@ -294,6 +298,9 @@ const resources = {
           },
           formation: {
             title: 'Formation - Photoshop',
+            subsections: {
+              tiktok: 'Créations TikTok - Mon Univers'
+            },
             items: {
               formation1: {
                 title: 'Création Photoshop',
@@ -310,6 +317,30 @@ const resources = {
               formationba2: {
                 title: 'Retouche Photo',
                 category: 'Avant/Après'
+              },
+              tiktok1: {
+                title: 'Masazzi, Tunis',
+                category: 'Restaurant'
+              },
+              tiktok2: {
+                title: 'December in Djerba Hotel',
+                category: 'Hôtel'
+              },
+              tiktok3: {
+                title: 'Lancôme Makeup Edit',
+                category: 'Beauté'
+              },
+              tiktok4: {
+                title: 'La Pistacherie, Paris',
+                category: 'Restaurant'
+              },
+              tiktok5: {
+                title: 'Pilau Restaurant, Tunis',
+                category: 'Restaurant'
+              },
+              tiktok6: {
+                title: 'Planet Wok ST-BRICE, Paris',
+                category: 'Restaurant'
               }
             }
           }
@@ -535,6 +566,7 @@ const resources = {
         subtitle: 'Let\'s discuss your next project',
         email: 'Email',
         linkedin: 'LinkedIn',
+        tiktok: 'TikTok',
         location: 'Location',
         availability: 'Availability',
         availabilityValue: 'Open to opportunities',
@@ -577,6 +609,9 @@ const resources = {
         title: 'Portfolio',
         subtitle: 'A selection of my projects in digital marketing and content creation',
         viewWebsite: 'View Website',
+        tiktokCTA: 'Want to see more content? Follow me on TikTok! 🎵',
+        followers: 'followers',
+        following: 'following',
         categories: {
           academic: {
             title: 'Academic Projects',
@@ -665,6 +700,9 @@ const resources = {
           },
           formation: {
             title: 'Training - Photoshop',
+            subsections: {
+              tiktok: 'TikTok Creations - My Universe'
+            },
             items: {
               formation1: {
                 title: 'Photoshop Creation',
@@ -681,6 +719,30 @@ const resources = {
               formationba2: {
                 title: 'Photo Retouching',
                 category: 'Before/After'
+              },
+              tiktok1: {
+                title: 'Masazzi, Tunis',
+                category: 'Restaurant'
+              },
+              tiktok2: {
+                title: 'December in Djerba Hotel',
+                category: 'Hotel'
+              },
+              tiktok3: {
+                title: 'Lancôme Makeup Edit',
+                category: 'Beauty'
+              },
+              tiktok4: {
+                title: 'La Pistacherie, Paris',
+                category: 'Restaurant'
+              },
+              tiktok5: {
+                title: 'Pilau Restaurant, Tunis',
+                category: 'Restaurant'
+              },
+              tiktok6: {
+                title: 'Planet Wok ST-BRICE, Paris',
+                category: 'Restaurant'
               }
             }
           }

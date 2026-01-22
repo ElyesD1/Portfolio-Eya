@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Briefcase, X, ChevronLeft, ChevronRight, Play, FileText, ExternalLink } from 'lucide-react'
+import TikTokVideoPlayer from './TikTokVideoPlayer'
+import TikTokAccountPreview from './TikTokAccountPreview'
 import './Work.css'
 
 // Import academic projects
@@ -32,6 +34,14 @@ import formationbefore1 from '../assets/formationbefore1.jpg'
 import formationafter1 from '../assets/formationafter1.jpg'
 import formationbefore2 from '../assets/formationbefore2.jpg'
 import formationafter2 from '../assets/formationafter2.jpg'
+
+// Import TikTok videos
+import tiktok1 from '../assets/TikTok1.mp4'
+import tiktok2 from '../assets/TikTok2.mp4'
+import tiktok3 from '../assets/TikTok3.mp4'
+import tiktok4 from '../assets/TikTok4.mp4'
+import tiktok5 from '../assets/TikTok5.mp4'
+import tiktok6 from '../assets/TikTok6.mp4'
 
 const Work = () => {
   const { t } = useTranslation()
@@ -192,36 +202,89 @@ const Work = () => {
     {
       key: 'formation',
       title: t('work.categories.formation.title'),
-      items: [
+      subsections: [
         {
-          id: 'formation1',
-          type: 'image',
-          src: formation1,
-          title: t('work.categories.formation.items.formation1.title'),
-          category: t('work.categories.formation.items.formation1.category')
+          key: 'photoshop',
+          items: [
+            {
+              id: 'formation1',
+              type: 'image',
+              src: formation1,
+              title: t('work.categories.formation.items.formation1.title'),
+              category: t('work.categories.formation.items.formation1.category')
+            },
+            {
+              id: 'formation2',
+              type: 'image',
+              src: formation2,
+              title: t('work.categories.formation.items.formation2.title'),
+              category: t('work.categories.formation.items.formation2.category')
+            },
+            {
+              id: 'formationba1',
+              type: 'before-after',
+              before: formationbefore1,
+              after: formationafter1,
+              title: t('work.categories.formation.items.formationba1.title'),
+              category: t('work.categories.formation.items.formationba1.category')
+            },
+            {
+              id: 'formationba2',
+              type: 'before-after',
+              before: formationbefore2,
+              after: formationafter2,
+              title: t('work.categories.formation.items.formationba2.title'),
+              category: t('work.categories.formation.items.formationba2.category')
+            }
+          ]
         },
         {
-          id: 'formation2',
-          type: 'image',
-          src: formation2,
-          title: t('work.categories.formation.items.formation2.title'),
-          category: t('work.categories.formation.items.formation2.category')
-        },
-        {
-          id: 'formationba1',
-          type: 'before-after',
-          before: formationbefore1,
-          after: formationafter1,
-          title: t('work.categories.formation.items.formationba1.title'),
-          category: t('work.categories.formation.items.formationba1.category')
-        },
-        {
-          id: 'formationba2',
-          type: 'before-after',
-          before: formationbefore2,
-          after: formationafter2,
-          title: t('work.categories.formation.items.formationba2.title'),
-          category: t('work.categories.formation.items.formationba2.category')
+          key: 'tiktok',
+          title: t('work.categories.formation.subsections.tiktok'),
+          items: [
+            {
+              id: 'tiktok1',
+              type: 'tiktok-video',
+              src: tiktok1,
+              title: t('work.categories.formation.items.tiktok1.title'),
+              category: t('work.categories.formation.items.tiktok1.category')
+            },
+            {
+              id: 'tiktok2',
+              type: 'tiktok-video',
+              src: tiktok2,
+              title: t('work.categories.formation.items.tiktok2.title'),
+              category: t('work.categories.formation.items.tiktok2.category')
+            },
+            {
+              id: 'tiktok3',
+              type: 'tiktok-video',
+              src: tiktok3,
+              title: t('work.categories.formation.items.tiktok3.title'),
+              category: t('work.categories.formation.items.tiktok3.category')
+            },
+            {
+              id: 'tiktok4',
+              type: 'tiktok-video',
+              src: tiktok4,
+              title: t('work.categories.formation.items.tiktok4.title'),
+              category: t('work.categories.formation.items.tiktok4.category')
+            },
+            {
+              id: 'tiktok5',
+              type: 'tiktok-video',
+              src: tiktok5,
+              title: t('work.categories.formation.items.tiktok5.title'),
+              category: t('work.categories.formation.items.tiktok5.category')
+            },
+            {
+              id: 'tiktok6',
+              type: 'tiktok-video',
+              src: tiktok6,
+              title: t('work.categories.formation.items.tiktok6.title'),
+              category: t('work.categories.formation.items.tiktok6.category')
+            }
+          ]
         }
       ]
     }
@@ -334,7 +397,7 @@ const Work = () => {
                       {subsection.items.map((item) => (
                       <motion.div
                         key={item.id}
-                        className={`work-item glass ${item.type === 'video' || item.type === 'mobile-video' ? 'video-card' : 'content-card'} ${item.type === 'mobile-video' ? 'mobile-video-card' : ''}`}
+                        className={`work-item glass ${item.type === 'video' || item.type === 'mobile-video' || item.type === 'tiktok-video' ? 'video-card' : 'content-card'} ${item.type === 'mobile-video' || item.type === 'tiktok-video' ? 'mobile-video-card' : ''}`}
                         variants={itemVariants}
                         whileHover={{ y: -10, scale: 1.02 }}
                         onClick={() => {
@@ -346,7 +409,13 @@ const Work = () => {
                         }}
                       >
                           <div className="work-preview">
-                            {item.type === 'mobile-video' ? (
+                            {item.type === 'tiktok-video' ? (
+                              <TikTokVideoPlayer
+                                src={item.src}
+                                title={item.title}
+                                category={item.category}
+                              />
+                            ) : item.type === 'mobile-video' ? (
                               <div className="mobile-video-container">
                                 <div className="mobile-frame">
                                   <div className="mobile-notch"></div>
@@ -425,14 +494,19 @@ const Work = () => {
                               </div>
                             )}
                           </div>
-                          <div className="work-info">
-                            <span className="work-category-badge">{item.category}</span>
-                            <h4 className="work-title">{item.title}</h4>
-                          </div>
+                          {item.type !== 'tiktok-video' && (
+                            <div className="work-info">
+                              <span className="work-category-badge">{item.category}</span>
+                              <h4 className="work-title">{item.title}</h4>
+                            </div>
+                          )}
                         </motion.div>
                       ))}
                     </div>
                   </div>
+                  
+                  {/* Add TikTok Account Preview for TikTok subsection */}
+                  {subsection.key === 'tiktok' && <TikTokAccountPreview />}
                 </div>
               ))
             ) : (

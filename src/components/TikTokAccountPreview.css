@@ -1,0 +1,195 @@
+/* ========================================
+   TikTok Account Preview Styles
+   ======================================== */
+
+.tiktok-preview-wrapper {
+  margin-top: 60px;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tiktok-cta-text {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  color: rgba(216, 180, 254, 0.9);
+  margin-bottom: 30px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #c084fc, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tiktok-account-preview {
+  display: block;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(192, 132, 252, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.tiktok-account-preview:hover {
+  border-color: rgba(192, 132, 252, 0.5);
+  box-shadow: 
+    0 10px 40px rgba(192, 132, 252, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.tiktok-preview-content {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  align-items: flex-start;
+}
+
+.tiktok-preview-image {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.tiktok-preview-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(192, 132, 252, 0.3);
+  box-shadow: 0 4px 20px rgba(192, 132, 252, 0.2);
+}
+
+.tiktok-icon-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #0f0520;
+  box-shadow: 0 2px 10px rgba(168, 85, 247, 0.5);
+}
+
+.tiktok-preview-info {
+  flex: 1;
+  text-align: left;
+  min-width: 0;
+}
+
+.tiktok-preview-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.tiktok-username {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+}
+
+.external-icon {
+  color: rgba(192, 132, 252, 0.7);
+  flex-shrink: 0;
+}
+
+.tiktok-handle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  margin: 0 0 12px 0;
+}
+
+.tiktok-stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.stat {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.stat strong {
+  color: white;
+  font-weight: 600;
+}
+
+.stat-divider {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.tiktok-bio {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.tiktok-preview-footer {
+  padding: 16px 24px;
+  background: rgba(168, 85, 247, 0.1);
+  border-top: 1px solid rgba(192, 132, 252, 0.2);
+}
+
+.tiktok-link-text {
+  color: rgba(192, 132, 252, 0.9);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tiktok-preview-content {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .tiktok-preview-image img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .tiktok-icon-badge {
+    width: 28px;
+    height: 28px;
+  }
+
+  .tiktok-username {
+    font-size: 1rem;
+  }
+
+  .tiktok-stats {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .tiktok-preview-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .tiktok-preview-info {
+    text-align: center;
+  }
+
+  .tiktok-preview-header {
+    justify-content: center;
+  }
+
+  .tiktok-stats {
+    justify-content: center;
+  }
+}
