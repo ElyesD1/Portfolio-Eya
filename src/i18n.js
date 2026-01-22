@@ -327,7 +327,7 @@ const resources = {
                 category: 'Hôtel'
               },
               tiktok3: {
-                title: 'Lancôme Makeup Edit',
+                title: 'Unboxing Lancôme',
                 category: 'Beauté'
               },
               tiktok4: {
@@ -729,7 +729,7 @@ const resources = {
                 category: 'Hotel'
               },
               tiktok3: {
-                title: 'Lancôme Makeup Edit',
+                title: 'Unboxing Lancôme',
                 category: 'Beauty'
               },
               tiktok4: {
