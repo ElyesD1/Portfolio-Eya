@@ -282,6 +282,10 @@ const resources = {
                 title: 'Miniature YouTube',
                 category: 'YouTube'
               },
+              alternance14: {
+                title: 'Fiche Publicitaire',
+                category: 'Publicité'
+              },
               alternance13: {
                 title: 'Newsletter Advyse',
                 category: 'Newsletter'
@@ -340,6 +344,26 @@ const resources = {
               },
               tiktok6: {
                 title: 'Planet Wok ST-BRICE, Paris',
+                category: 'Restaurant'
+              },
+              tiktok7: {
+                title: 'Événementiel',
+                category: 'Événement'
+              },
+              tiktok9: {
+                title: 'Vlog Beauté',
+                category: 'Beauté'
+              },
+              tiktok10: {
+                title: 'DEMEL Edit',
+                category: 'Lifestyle'
+              },
+              tiktok11: {
+                title: 'Summer Vibes',
+                category: 'Lifestyle'
+              },
+              tiktok12: {
+                title: 'Food Edit',
                 category: 'Restaurant'
               }
             }
@@ -684,6 +708,10 @@ const resources = {
                 title: 'YouTube Thumbnail',
                 category: 'YouTube'
               },
+              alternance14: {
+                title: 'Advertising Sheet',
+                category: 'Advertising'
+              },
               alternance13: {
                 title: 'Advyse Newsletter',
                 category: 'Newsletter'
@@ -742,6 +770,26 @@ const resources = {
               },
               tiktok6: {
                 title: 'Planet Wok ST-BRICE, Paris',
+                category: 'Restaurant'
+              },
+              tiktok7: {
+                title: 'Event Party',
+                category: 'Event'
+              },
+              tiktok9: {
+                title: 'Beauty Vlog',
+                category: 'Beauty'
+              },
+              tiktok10: {
+                title: 'DEMEL Edit',
+                category: 'Lifestyle'
+              },
+              tiktok11: {
+                title: 'Summer Vibes',
+                category: 'Lifestyle'
+              },
+              tiktok12: {
+                title: 'Food Edit',
                 category: 'Restaurant'
               }
             }

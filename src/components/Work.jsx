@@ -24,6 +24,7 @@ import alternance10 from '../assets/alternance10.jpg'
 import alternance11 from '../assets/alternance11.jpg'
 import alternance12 from '../assets/alternance12.jpg'
 import alternance13 from '../assets/alternance13.mp4'
+import alternance14 from '../assets/alternance14.jpg'
 import pochette from '../assets/pochette.mp4'
 import montage from '../assets/montage.mp4'
 
@@ -42,6 +43,11 @@ import tiktok3 from '../assets/TikTok3.mp4'
 import tiktok4 from '../assets/TikTok4.mp4'
 import tiktok5 from '../assets/TikTok5.mp4'
 import tiktok6 from '../assets/TikTok6.mp4'
+import tiktok7 from '../assets/Tiktok7.mp4'
+import tiktok9 from '../assets/Tiktok9.mp4'
+import tiktok10 from '../assets/Tiktok10.mp4'
+import tiktok11 from '../assets/Tiktok11.mp4'
+import tiktok12 from '../assets/Tiktok12.mp4'
 
 const Work = () => {
   const { t } = useTranslation()
@@ -167,6 +173,13 @@ const Work = () => {
           src: alternance12,
           title: t('work.categories.alternance.items.alternance12.title'),
           category: t('work.categories.alternance.items.alternance12.category')
+        },
+        {
+          id: 'alternance14',
+          type: 'image',
+          src: alternance14,
+          title: t('work.categories.alternance.items.alternance14.title'),
+          category: t('work.categories.alternance.items.alternance14.category')
         }
           ]
         },
@@ -283,6 +296,41 @@ const Work = () => {
               src: tiktok6,
               title: t('work.categories.formation.items.tiktok6.title'),
               category: t('work.categories.formation.items.tiktok6.category')
+            },
+            {
+              id: 'tiktok7',
+              type: 'tiktok-video',
+              src: tiktok7,
+              title: t('work.categories.formation.items.tiktok7.title'),
+              category: t('work.categories.formation.items.tiktok7.category')
+            },
+            {
+              id: 'tiktok9',
+              type: 'tiktok-video',
+              src: tiktok9,
+              title: t('work.categories.formation.items.tiktok9.title'),
+              category: t('work.categories.formation.items.tiktok9.category')
+            },
+            {
+              id: 'tiktok10',
+              type: 'tiktok-video',
+              src: tiktok10,
+              title: t('work.categories.formation.items.tiktok10.title'),
+              category: t('work.categories.formation.items.tiktok10.category')
+            },
+            {
+              id: 'tiktok11',
+              type: 'tiktok-video',
+              src: tiktok11,
+              title: t('work.categories.formation.items.tiktok11.title'),
+              category: t('work.categories.formation.items.tiktok11.category')
+            },
+            {
+              id: 'tiktok12',
+              type: 'tiktok-video',
+              src: tiktok12,
+              title: t('work.categories.formation.items.tiktok12.title'),
+              category: t('work.categories.formation.items.tiktok12.category')
             }
           ]
         }
